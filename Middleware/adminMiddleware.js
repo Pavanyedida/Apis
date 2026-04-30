@@ -1,6 +1,6 @@
 var adminMiddleware = async(req,res,next)=>{
     try{
-        if(req.user.role !=="admin"){
+        if(req.user.role !=="user"){
             return res.status(403).json({message : "cannot acces admin routes"})
         }
         
